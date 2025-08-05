@@ -1,0 +1,86 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 20px;
+}
+
+.welcome-section {
+  text-align: center;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 40px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.welcome-section h1 {
+  font-size: 2em;
+  margin-bottom: 16px;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.welcome-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.welcome-image {
+  margin-top: 16px;
+}
+
+.political-emoji {
+  font-size: 2em;
+  display: block;
+  color: #666;
+}
+
+.home-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.home-btn {
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  display: inline-block;
+}
+
+.home-btn.primary {
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  border-color: var(--btn-primary-bg);
+}
+
+.home-btn.primary:hover {
+  background-color: var(--btn-primary-hover);
+  border-color: var(--btn-primary-hover);
+  box-shadow: 0 4px 8px var(--shadow-medium);
+  transform: translateY(-2px);
+}
+
+.home-btn.secondary {
+  background-color: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+  border-color: var(--btn-secondary-border);
+}
+
+.home-btn.secondary:hover {
+  background-color: var(--btn-secondary-hover-bg);
+  color: var(--btn-secondary-hover-text);
+  box-shadow: 0 4px 8px var(--shadow-medium);
+  transform: translateY(-2px);
+}

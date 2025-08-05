@@ -1,0 +1,125 @@
+/* Light Theme (Default) */
+:root,
+[data-theme="light"] {
+  /* Background Colors */
+  --bg-color: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #f0f0f0;
+  
+  /* Text Colors */
+  --text-color: #333333;
+  --text-secondary: #666666;
+  --text-muted: #999999;
+  
+  /* Border Colors */
+  --border-color: #e0e0e0;
+  --border-secondary: #ddd;
+  --border-focus: #333;
+  
+  /* Button Colors */
+  --btn-primary-bg: #333333;
+  --btn-primary-text: #ffffff;
+  --btn-primary-hover: #555555;
+  
+  --btn-secondary-bg: transparent;
+  --btn-secondary-text: #333333;
+  --btn-secondary-border: #333333;
+  --btn-secondary-hover-bg: #333333;
+  --btn-secondary-hover-text: #ffffff;
+  
+  /* Card Colors */
+  --card-bg: #ffffff;
+  --card-border: #e0e0e0;
+  --card-hover-border: #999999;
+  
+  /* Sidebar Colors */
+  --sidebar-bg: #ffffff;
+  --sidebar-border: #e0e0e0;
+  --sidebar-nav-hover: #f8f9fa;
+  --sidebar-nav-active: #333333;
+  --sidebar-nav-active-text: #ffffff;
+  
+  /* Form Colors */
+  --input-bg: #ffffff;
+  --input-border: #ddd;
+  --input-focus-border: #333;
+  --input-text: #333;
+  
+  /* Vote Button Colors */
+  --vote-like-active: #4caf50;
+  --vote-dislike-active: #f44336;
+  --vote-inactive: #e0e0e0;
+  
+  /* Shadow Colors */
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.15);
+  --shadow-heavy: rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  /* Background Colors */
+  --bg-color: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --bg-tertiary: #3a3a3a;
+  
+  /* Text Colors */
+  --text-color: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --text-muted: #888888;
+  
+  /* Border Colors */
+  --border-color: #404040;
+  --border-secondary: #555555;
+  --border-focus: #4a90e2;
+  
+  /* Button Colors */
+  --btn-primary-bg: #4a90e2;
+  --btn-primary-text: #ffffff;
+  --btn-primary-hover: #357abd;
+  
+  --btn-secondary-bg: transparent;
+  --btn-secondary-text: #4a90e2;
+  --btn-secondary-border: #4a90e2;
+  --btn-secondary-hover-bg: #4a90e2;
+  --btn-secondary-hover-text: #ffffff;
+  
+  /* Card Colors */
+  --card-bg: #2d2d2d;
+  --card-border: #404040;
+  --card-hover-border: #666666;
+  
+  /* Sidebar Colors */
+  --sidebar-bg: #2d2d2d;
+  --sidebar-border: #404040;
+  --sidebar-nav-hover: #3a3a3a;
+  --sidebar-nav-active: #4a90e2;
+  --sidebar-nav-active-text: #ffffff;
+  
+  /* Form Colors */
+  --input-bg: #3a3a3a;
+  --input-border: #555555;
+  --input-focus-border: #4a90e2;
+  --input-text: #e0e0e0;
+  
+  /* Vote Button Colors */
+  --vote-like-active: #66bb6a;
+  --vote-dislike-active: #ef5350;
+  --vote-inactive: #555555;
+  
+  /* Shadow Colors */
+  --shadow-light: rgba(255, 255, 255, 0.1);
+  --shadow-medium: rgba(255, 255, 255, 0.15);
+  --shadow-heavy: rgba(255, 255, 255, 0.2);
+}
+
+/* Global theme transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Body background */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}

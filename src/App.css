@@ -1,0 +1,82 @@
+@import './styles/theme.css';
+
+.App {
+  font-family: Avenir, "Century Gothic", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: calc(10px + 2vmin);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  display: flex;
+}
+
+.main-content {
+  margin-left: 260px;
+  flex: 1;
+  padding: 30px;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  width: calc(100% - 260px);
+}
+
+.header {
+  width: 100%;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.headerBtn {
+  margin-bottom: 20px;
+  margin-right: 10px;
+  background-color: #333;
+  border: 1px solid #333;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.headerBtn:hover {
+  background-color: #555;
+  border-color: #555;
+}
+
+button {
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 0.6em 1.2em;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #f8f9fa;
+  border-color: #999;
+}
+
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 15px;
+    width: 100%;
+  }
+  
+  .App {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+  }
+}

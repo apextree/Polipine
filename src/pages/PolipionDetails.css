@@ -1,0 +1,388 @@
+.polipion-details-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.polipion-details-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 30px;
+  color: #333;
+}
+
+.polipion-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.back-link,
+.edit-link {
+  color: #333;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.back-link:hover,
+.edit-link:hover {
+  background-color: #f8f9fa;
+  border-color: #999;
+}
+
+.polipion-details-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.polipion-details-image {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.details-polipion-image {
+  width: 400px;
+  height: 300px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.polipion-info {
+  flex: 1;
+}
+
+.polipion-details-title {
+  font-size: 2em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.polipion-meta {
+  margin-bottom: 20px;
+}
+
+.meta-label {
+  font-weight: 500;
+  color: #333;
+}
+
+.polipion-stats {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.stat-label {
+  font-weight: 500;
+  color: #666;
+  font-size: 14px;
+}
+
+.stat-value {
+  font-size: 16px;
+  color: #333;
+}
+
+.party-badge {
+  background-color: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.polipion-opinion {
+  margin-bottom: 30px;
+}
+
+.polipion-opinion h3 {
+  font-size: 1.3em;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.opinion-text {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #333;
+}
+
+.opinion-text p {
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+.polipion-actions {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.vote-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.upvote-btn,
+.downvote-btn {
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.upvote-btn:hover:not(:disabled) {
+  background-color: #e8f5e8;
+  border-color: #4caf50;
+  color: #4caf50;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+}
+
+.downvote-btn:hover:not(:disabled) {
+  background-color: #ffeaea;
+  border-color: #f44336;
+  color: #f44336;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(244, 67, 54, 0.3);
+}
+
+/* Voted state styles removed - users can now vote unlimited times */
+
+.upvote-btn:disabled,
+.downvote-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-prompt {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.login-prompt a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-prompt a:hover {
+  text-decoration: underline;
+}
+
+.voting-info {
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-top: 8px;
+  padding: 6px 12px;
+  background-color: var(--bg-tertiary);
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+}
+
+.comments-section {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 30px;
+}
+
+.comments-section h3 {
+  font-size: 1.3em;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.add-comment-form {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.comment-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  margin-bottom: 15px;
+}
+
+.comment-input:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.submit-comment-btn {
+  background-color: #333;
+  color: white;
+  border: 1px solid #333;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submit-comment-btn:hover:not(:disabled) {
+  background-color: #555;
+  color: white;
+  border-color: #555;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.submit-comment-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.comment-item {
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #666;
+}
+
+.comment-author {
+  font-weight: 500;
+  color: #333;
+}
+
+.comment-text {
+  color: #333;
+  line-height: 1.5;
+}
+
+.no-comments {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 20px;
+}
+
+.loading-container,
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  text-align: center;
+}
+
+.loading-container h2,
+.error-container h2 {
+  color: #666;
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.error-container button {
+  background-color: #333;
+  color: white;
+  border: 1px solid #333;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.error-container button:hover {
+  background-color: #555;
+  border-color: #555;
+}
+
+
+@media (max-width: 768px) {
+  .polipion-details-container {
+    padding: 15px;
+  }
+
+  .polipion-details-card {
+    padding: 20px;
+  }
+
+  .polipion-details-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  .polipion-stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .vote-buttons {
+    flex-direction: column;
+  }
+
+  .polipion-details-title {
+    font-size: 1.5em;
+  }
+
+  .details-polipion-image {
+    width: 100%;
+    max-width: 350px;
+    height: 250px;
+  }
+}
