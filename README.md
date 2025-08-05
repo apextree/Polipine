@@ -2,7 +2,7 @@
 
 Submitted by: **Anubhav Dhungana**
 
-This web app: ****
+This web app: **Polipine(Politics + Opine) is a social platform where users can share and discover political opinions from around the world. Users can create "polipions" (political opinions) about politicians, vote on posts, leave comments, and engage in political discussions in a structured, user-friendly environment. Users can also sort posts by upvotes or creation time.**
 
 Time spent: **16** hours spent in total
 
@@ -58,7 +58,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='src/assets/Final Project Demo GIF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 GIF created with ...  
