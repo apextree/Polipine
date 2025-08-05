@@ -16,7 +16,7 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Check if user is logged in on app start
+    
     const savedUser = localStorage.getItem('polipine_user');
     if (savedUser) {
       setUser(JSON.parse(savedUser));
@@ -25,7 +25,6 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const hashPassword = async (password) => {
-    // Simple hash function for demo - in production use bcrypt or similar
     const encoder = new TextEncoder();
     const data = encoder.encode(password);
     const hash = await crypto.subtle.digest('SHA-256', data);
@@ -36,7 +35,7 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (username, password) => {
     try {
-      // Check if username already exists
+      
       const { data: existingUser } = await supabase
         .from('users')
         .select('username')
@@ -47,10 +46,10 @@ export const AuthProvider = ({ children }) => {
         throw new Error('Username already exists');
       }
 
-      // Hash password
+      
       const passwordHash = await hashPassword(password);
 
-      // Create new user
+      
       const { data, error } = await supabase
         .from('users')
         .insert({

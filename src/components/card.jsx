@@ -1,18 +1,38 @@
 import "./card.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { supabase } from "../client";
 
 const Card = (props) => {
   const { user } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const deletePolipion = async () => {
     if (window.confirm('Are you sure you want to delete this Polipion?')) {
-      await supabase
-        .from("polipions")
-        .delete()
-        .eq("id", props.id);
-      window.location.reload();
+      try {
+        const { error } = await supabase
+          .from("polipions")
+          .delete()
+          .eq("id", props.id);
+
+        if (error) {
+          console.error("Error deleting polipion:", error);
+          alert("Error deleting polipion: " + error.message);
+          return;
+        }
+
+        // If we're on the polipion detail page, navigate to polipions list
+        if (location.pathname.includes(`/polipion/${props.id}`)) {
+          navigate('/polipions');
+        } else {
+          // Otherwise just reload the current page
+          window.location.reload();
+        }
+      } catch (error) {
+        console.error("Unexpected error:", error);
+        alert("Unexpected error occurred: " + error.message);
+      }
     }
   };
 

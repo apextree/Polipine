@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { supabase } from "../client";
 import "./PolipionDetails.css";
@@ -7,10 +7,12 @@ import "./PolipionDetails.css";
 const PolipionDetails = () => {
   const { id } = useParams();
   const { user } = useAuth();
+  const navigate = useNavigate();
   const [polipion, setPolipion] = useState(null);
   const [loading, setLoading] = useState(true);
   const [newComment, setNewComment] = useState('');
   const [submittingComment, setSubmittingComment] = useState(false);
+  const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
     fetchPolipion();
@@ -29,11 +31,16 @@ const PolipionDetails = () => {
 
       if (error) {
         console.error("Error fetching Polipion:", error);
+        if (error.code === 'PGRST116') {
+          // No rows returned - polipion doesn't exist
+          setNotFound(true);
+        }
       } else {
         setPolipion(data);
       }
     } catch (error) {
       console.error("Unexpected error:", error);
+      setNotFound(true);
     } finally {
       setLoading(false);
     }
@@ -172,13 +179,19 @@ const PolipionDetails = () => {
     );
   }
 
-  if (!polipion) {
+  if (notFound || (!loading && !polipion)) {
     return (
       <div className="error-container">
         <h2>Polipion not found</h2>
-        <Link to="/polipions">
-          <button>Back to All Polipions</button>
-        </Link>
+        <p>This polipion may have been deleted or doesn't exist.</p>
+        <div className="error-actions">
+          <Link to="/polipions">
+            <button className="back-btn">Back to All Polipions</button>
+          </Link>
+          <Link to="/">
+            <button className="home-btn">Go Home</button>
+          </Link>
+        </div>
       </div>
     );
   }

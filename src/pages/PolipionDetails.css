@@ -4,6 +4,79 @@
   margin: 0 auto;
 }
 
+.error-container {
+  text-align: center;
+  padding: 3rem;
+  max-width: 500px;
+  margin: 2rem auto;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  color: #333;
+}
+
+.error-container h2 {
+  color: #dc3545;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.error-container p {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.error-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.back-btn,
+.home-btn {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover,
+.home-btn:hover {
+  background-color: #f8f9fa;
+  border-color: #999;
+}
+
+/* Dark theme support for error container */
+[data-theme="dark"] .error-container {
+  background: #2d3748;
+  border-color: #4a5568;
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .error-container p {
+  color: #a0aec0;
+}
+
+[data-theme="dark"] .back-btn,
+[data-theme="dark"] .home-btn {
+  background: #4a5568;
+  border-color: #718096;
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .back-btn:hover,
+[data-theme="dark"] .home-btn:hover {
+  background: #718096;
+  border-color: #a0aec0;
+}
+
 .polipion-details-card {
   background: white;
   border: 1px solid #e0e0e0;

@@ -65,8 +65,9 @@ GIF created with ...
 MacOS Screen Recording Tool.
 
 ## Notes
+* Working with Supabase can get pretty confusing.
+* The login system was pretty tricky. I had to use a context API to manage the user state. 
 
-Describe any challenges encountered while building the app.
 
 ## License
 

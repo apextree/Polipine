@@ -9,6 +9,7 @@ import PolipionDetails from './pages/PolipionDetails'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
+import NotFound from './pages/NotFound'
 import Sidebar from './components/Sidebar'
 import ThemeToggle from './components/ThemeToggle'
 import ProtectedRoute from './components/ProtectedRoute'
@@ -49,6 +50,10 @@ const App = () => {
     {
       path:"/new",
       element: <ProtectedRoute><CreatePolipion /></ProtectedRoute>
+    },
+    {
+      path: "*",
+      element: <NotFound />
     }
   ]);
 
